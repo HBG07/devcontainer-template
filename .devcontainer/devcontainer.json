@@ -1,0 +1,24 @@
+{
+    "name": "project-dev", // project name
+    "dockerComposeFile": [
+        "docker-compose.yml" // docker compose file to build the container
+    ],
+    "service": "vscode",
+    // run the docker compose services
+    "runServices": [
+        "vscode"
+    ],
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace", // relative path to work in the container
+    "postCreateCommand": "",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "creator.extension-name"
+            ],
+            "settings": {
+                "option-name": "option-value"
+            }
+        }
+    }
+}
